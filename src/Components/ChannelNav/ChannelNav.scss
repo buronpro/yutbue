@@ -1,0 +1,45 @@
+@import "../../Sass/Variables.scss";
+
+.channel__nav__list {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.channel__nav__item {
+  & + & {
+    margin-left: 60px;
+  }
+}
+
+.channel__nav__link {
+  margin-bottom: 3px;
+  font-size: 18px;
+  line-height: 23px;
+  color: #000000;
+  text-decoration: none;
+
+  &::after {
+    content: "";
+    width: 100%;
+    height: 2px;
+    display: block;
+    border-radius: 3px;
+  }
+
+  &--active {
+    // font-weight: 700;
+    color: $red;
+
+    &::after {
+      background-color: $red;
+    }
+  }
+}
+
+.channel__item__text {
+  display: block;
+  padding: 0 5px;
+}

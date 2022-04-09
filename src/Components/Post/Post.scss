@@ -1,0 +1,86 @@
+@import "../../Sass/Variables.scss";
+
+.post {
+  position: relative;
+  max-width: 250px;
+  width: 100%;
+  flex-shrink: 0;
+
+  &:last-child {
+    margin-right: 20px;
+  }
+}
+
+.post__inner {
+  cursor: pointer;
+}
+
+.post__image {
+  width: 100%;
+  margin-bottom: 10px;
+  border-radius: 14px;
+  object-fit: cover;
+}
+
+.post__title {
+  max-height: 40px;
+  margin: 0;
+  margin-bottom: 4px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  color: $heading-color-light;
+  overflow: hidden;
+  -webkit-line-clamp: 2;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  white-space: normal;
+
+  &::first-letter {
+    text-transform: uppercase;
+  }
+}
+
+.post__bottom {
+  display: flex;
+  justify-content: space-between;
+}
+
+.post__bottom__inner {
+  display: flex;
+  align-items: center;
+}
+
+.post__bottom__text {
+  display: flex;
+  align-items: center;
+  font-size: 13px;
+  line-height: 16px;
+  color: $text-color-light;
+
+  & + & {
+    &::before {
+      content: "";
+      display: block;
+      width: 1px;
+      height: 1px;
+      margin: 0 8px;
+      background-color: $text-color-light;
+    }
+  }
+}
+
+.post__bottom__link {
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.App--dark {
+  .post__title {
+    color: $heading-color-dark;
+  }
+}
